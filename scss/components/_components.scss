@@ -23,9 +23,9 @@
   width: 100%;
   height: 100%;
   background-image: linear-gradient(180deg,rgba($color: #000000, $alpha: 0.01),rgba($color: #000000, $alpha: 0.5));
-  position: absolute;
   z-index: 3;
   overflow: hidden;
+  position: fixed;
 }
 .hidden{
   visibility: hidden;
