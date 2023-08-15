@@ -1,0 +1,247 @@
+@use '../abstracts' as a;
+header{
+  position: relative;
+  overflow: hidden;
+  .header__bgimg{
+    background-image: url(../../assets/bg-tablet-pattern.svg);
+    width: 138%;
+    height: 110%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -280px;
+    right: -180px;
+    z-index: -1;
+    background-position: right;
+  } 
+  .active{
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    width: calc(100% - 3rem);
+    max-width: 500px;
+    height: 40%;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    z-index: 10;
+    font-weight: 700;
+    color: a.$darkBlue;
+  }
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5rem 1.5rem;
+    nav__logo{
+      img{
+        align-self: center;
+      }
+    }
+    &__close{
+      z-index: 12;
+      transition: opacity 0.3s;
+      cursor: pointer;
+      position: relative;
+      &:hover,&:active{
+        opacity: 0.7;
+      }
+    }
+    &__humburger{
+      transition: opacity 0.3s;
+      cursor: pointer;
+      &:hover,&:active{
+        opacity: 0.7;
+      }
+    }
+    &__list{
+      display: none;
+      &-item{
+        text-align: center;
+        width: 100%;
+        padding: 1.2rem 0;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+        &:hover{
+          color: a.$darkGrayishBlue;
+        }
+      }
+    }
+    &__btn{
+      display: none;
+    }
+    &__logo{
+      img{
+        width: 120px;
+      }
+    }
+  }
+  .hero{
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .hero__img{
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+    .hero__content{
+      margin: 0 1.5rem;
+      &-header{
+        font-size: 2.4rem;
+        color: a.$darkBlue;
+        font-weight: 700;
+      }
+      &-paragraph{
+        line-height: 1.7rem;
+        color: a.$darkGrayishBlue;
+        margin-top: 0.8rem;
+        margin-bottom: 1.8rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+.bgimgcontainer{
+  position: absolute;
+    overflow: clip;
+    width: 370px;
+    height: 320px;
+    top: 600px;
+    right: 0;
+  .bgimgabout{
+    background-image: url(../../assets/bg-tablet-pattern.svg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0px;
+    right: -240px;
+    background-position: left;
+    z-index: -1;
+  }
+}
+@media (min-width: a.$sm){
+  header{
+    .header__bgimg{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+@media (min-width: a.$md){
+  header{
+    .nav{
+      &__logo{
+        img{
+          width: 120px;
+        }
+      }
+    }
+    .hero{
+      .hero__img{
+        height: 80%;
+        width: 80%;
+      }
+      .hero__content{
+        width: 70%;
+        &-header{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .bgimgcontainer{
+    width: 500px;
+    height: 500px;
+  }
+}
+@media (min-width: a.$lg){
+  header{
+    margin-bottom: 3rem;
+    .header__bgimg{
+      top: -70px;
+      right: -50px;
+    } 
+    .nav{
+      align-items: center;
+      &__list{
+        display: flex;
+        flex-basis: 50%;
+        margin: 0;
+        padding: 0;
+        justify-content: space-around;
+        &-item{
+          font-size: 0.8rem;
+          color: a.$darkBlue;
+          font-weight: 500;
+          cursor: pointer;
+          transition: color 0.3s ease;
+          &:hover{
+            color: a.$darkGrayishBlue;
+          }
+        }
+      }
+      &__btn{
+        display: block;
+      }
+      &__icon{
+        display: none;
+      }
+      &__logo{
+        img{
+          width: fit-content;
+        }
+      }
+    }
+    .hero{
+      flex-direction: row-reverse;
+      text-align: left;
+      .hero__img{
+        height: 60%;
+        width: 60%;
+      }
+      .hero__content{
+        width: 100%;
+        &-header{
+          margin-bottom: 0;
+          max-width: 350px;
+        }
+        &-paragraph{
+          max-width: 320px;
+        }
+      }
+    }
+  }
+  .bgimgcontainer{
+    display: none;
+  }
+}
+@media (min-width: a.$xl){
+  header{
+    margin-bottom: 5rem;
+    .nav{
+    .hero{
+      .hero__content{
+        width: 100%;
+        &-header{
+          font-size: 3rem;
+          max-width: 410px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
