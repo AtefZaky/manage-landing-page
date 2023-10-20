@@ -8,12 +8,12 @@
   align-items: center;
   padding: 2rem 0 0rem;
   &__head{
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: a.$darkBlue;
     text-align: center;
   }
   &__slider{
-    padding: 4rem 0 1rem;
+    padding: 4.25rem 0 1rem;
     display: flex;
     gap: 30px;
     width: 350px;
@@ -22,7 +22,7 @@
       // min-width: 412px;
       // padding: 1rem 4rem;
       min-width: 325px;
-      padding: 1rem 0.8rem;
+      padding: 2rem 0.8rem;
       text-align: center;
       background-color: hsl(0, 0%, 98%);
       position: relative;
@@ -36,13 +36,14 @@
         transform: translate(-50%, -50%);
       }
       &__head{
-        margin-top: 40px;
+        margin: 20px;
         color: a.$darkBlue;
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
       &__quote{
-        line-height: 1.8rem;
+        line-height: 26px;
         color: a.$darkGrayishBlue;
+        margin: 0;
       }
     }
   }
@@ -75,15 +76,15 @@
     &__slider{
       width: 540px;
       &-card{
-        min-width: 412px;
-        padding: 1rem 4rem;
+        min-width: 460px;
+        padding: 2.5rem;
       }
     }
   }
 }
 @media (min-width: a.$lg){
   .testimonials{
-    padding: 2rem 0 7rem;
+    padding: 3.125rem 0 7rem;
     &__pagination{
       display: none;
     }

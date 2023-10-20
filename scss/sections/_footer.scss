@@ -8,9 +8,9 @@
     justify-content: space-between;
     &-input{
       width: 100%;
-      margin-right: 5px;
+      margin-right: 8px;
       border-radius: 50px;
-      padding: 1rem;
+      padding: 0.7rem 1rem;
       outline: none;
       &::placeholder{
         font-size: 14px;
@@ -18,7 +18,8 @@
       }
     }
     &-btn{
-      padding: 1rem 1.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 13px;
     }
   }
   &__list{
@@ -65,7 +66,7 @@
 }
 @media (min-width: a.$lg){
   .footer{
-    padding: 3rem 0 1rem;
+    padding: 2.75rem 0 1.625rem;
     .container{
       display: grid;
       grid-template-columns: 1fr 2fr 1fr;
@@ -86,6 +87,7 @@
       grid-row-end: 4;
       width: 60%;
       height: 20px;
+      margin-top: 18px;
     }
     &__list{
       grid-column-start: 2;
@@ -93,6 +95,15 @@
       grid-row-start: 1;
       grid-row-end: 4;
       margin-top: 0;
+      &-items{
+        width: 255px;
+        margin: 0;
+        padding: 0;
+      }
+      &-item{
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
     }
     &__form{
       grid-column-start: 3;
@@ -106,6 +117,8 @@
       grid-row-start: 3;
       grid-row-end: 4;
       margin-top: 0;
+      text-align: right;
+      font-size: 13px;
     }
   }
 }

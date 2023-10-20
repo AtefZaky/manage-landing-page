@@ -168,7 +168,7 @@ header{
 }
 @media (min-width: a.$lg){
   header{
-    margin-bottom: 3rem;
+    padding-bottom: 3rem;
     .header__bgimg{
       top: -70px;
       right: -50px;
@@ -177,12 +177,12 @@ header{
       align-items: center;
       &__list{
         display: flex;
-        flex-basis: 50%;
+        flex-basis: 40%;
         margin: 0;
         padding: 0;
         justify-content: space-around;
         &-item{
-          font-size: 0.8rem;
+          font-size: 13px;
           color: a.$darkBlue;
           font-weight: 500;
           cursor: pointer;
@@ -208,13 +208,13 @@ header{
       flex-direction: row-reverse;
       text-align: left;
       .hero__img{
-        height: 60%;
-        width: 60%;
+        height: 485px;
+        width: 540px
       }
       .hero__content{
         width: 100%;
         &-header{
-          margin-bottom: 0;
+          margin: 0;
           max-width: 350px;
         }
         &-paragraph{
@@ -229,17 +229,28 @@ header{
 }
 @media (min-width: a.$xl){
   header{
-    margin-bottom: 5rem;
-    .nav{
+    padding-bottom: 5rem;
+    margin-bottom: 2.5rem;
+    .header__bgimg{
+      height: 105%;
+      top: -215px;
+      right: -150px;
+    }
     .hero{
+      margin-top: 120px;
       .hero__content{
         width: 100%;
         &-header{
-          font-size: 3rem;
-          max-width: 410px;
+          font-size: 3.5rem;
+          line-height: 4rem;
+          max-width: 480px;
+          }
+        &-paragraph{
+          max-width: 350px;
+          margin-bottom: 2.5rem;
+          margin-top: 1rem;
           }
         }
-      }
     }
   }
 }
