@@ -3,7 +3,7 @@ header{
   position: relative;
   overflow: hidden;
   .header__bgimg{
-    background-image: url(../../assets/bg-tablet-pattern.svg);
+    background-image: url(./bg-tablet-pattern.svg);
     width: 138%;
     height: 110%;
     position: absolute;
@@ -119,7 +119,7 @@ header{
     top: 600px;
     right: 0;
   .bgimgabout{
-    background-image: url(../../assets/bg-tablet-pattern.svg);
+    background-image: url(./bg-tablet-pattern.svg);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -230,7 +230,10 @@ header{
 @media (min-width: a.$xl){
   header{
     padding-bottom: 5rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.5rem;
+    .nav{
+      margin: 3.5rem 1.5rem;
+    }
     .header__bgimg{
       height: 105%;
       top: -215px;
